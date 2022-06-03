@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+    <h1>Registrate al toque!</h1>
+    <hr>
+    <form action="./tablas.html" method="get">
+        <table>
+            <tr>
+                <td>Nombre</td>
+                <td><input type="text" required></td>
+            </tr>
+            <tr>
+                <td>Apellido</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Correo</td>
+                <td><input type="email" required></td>
+            </tr>
+            <tr>
+                <td>Contraseña</td>
+                <td><input type="password" required></td>
+            </tr>
+            <tr>
+                <td>Genero</td>
+                <td>
+                    <select>
+                        <option>Masculino</option>
+                        <option>Femenino</option>
+                        <option>Otros</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Estado civil</td>
+                <td>
+                    <input type="radio" name="estado_civil"> Soltero
+                    <input type="radio" name="estado_civil"> Casado
+                </td>
+            </tr>
+            <tr>
+                <td>He leido los términos<br>y estoy de acuerdo</td>
+                <td><input type="checkbox">si, estoy de acuerdo</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;"><input type="submit" value="Registrarme"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
