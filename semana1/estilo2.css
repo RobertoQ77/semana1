@@ -1,0 +1,29 @@
+/* prioridad 5*/
+p{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: underline;
+}
+/* prioridad 4*/
+.par{
+    color: blue;
+}
+/* prioridad 3*/
+p.par{
+    color: purple;
+}
+/* prioridad 2*/
+#p2{
+    color: green;
+}
+/* prioridad 1*/
+p#p2{
+    color: orange;
+}
+.par#p2{
+    color: pink;
+}
+p.par#p2{
+    color: #dc00f4;
+}

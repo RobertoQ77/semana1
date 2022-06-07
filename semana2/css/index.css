@@ -1,0 +1,23 @@
+h1{
+    /*font-family*/
+    /*¿que pasa si una fuente no existe?*/
+    /*en CSS tenemos la opción de poner varios tipos de letra*/
+    /*para que en caso no encuentra la primera, escoge la segunda y asi consecutivamente*/
+    font-family: Apple-system,Helvetica,Arial;
+    font-size: 45px;
+    /* font-weight tambien puede recibir numeros del 100 a 900*/
+    font-weight: 100;
+}
+text-decoration: underline;
+.parrafo{
+    font-family: "Dank Mono",monospace;
+    /*font-size maneja el tamaño del texto*/
+    font-size: 100px;
+    font-weight: bold;
+}
+.link-a{
+    font-size: 32px;
+    font-family: "Dark Mono";
+    text-decoration: none;
+    color: #af1;
+}
