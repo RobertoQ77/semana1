@@ -10,14 +10,56 @@ h1{
 }
 text-decoration: underline;
 .parrafo{
-    font-family: "Dank Mono",monospace;
+    font-family: 'Fredericka the Great';
     /*font-size maneja el tamaño del texto*/
     font-size: 100px;
     font-weight: bold;
 }
 .link-a{
     font-size: 32px;
-    font-family: "Dark Mono";
+    font-family: "Italianno-Regular";
     text-decoration: none;
     color: #af1;
+}
+body{
+    font-family: Arial;
+}
+ul{
+    background-color: gray;
+}
+.span-1{
+    text-decoration: line-through;
+}
+.span-2{
+    text-decoration: overline;
+}
+.span-3{
+    text-decoration: underline;
+}
+.span-4{
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
+.span-5{
+    text-decoration: overline;
+    background-color: aquamarine;
+    text-decoration-color: white;
+}
+.span-6{
+    color: #fff;
+    text-decoration: underline;
+    background-color: rgb(252,90,255);
+    text-decoration-color: rgb(255,183,0);
+    text-transform: lowercase;
+}
+th{
+    font-family: "Kufam";
+}
+@font-face {
+    font-family: "Italianno-Regular";
+    src: url("../fonts/Italianno-Regular.ttf");
+}
+@font-face {
+    font-family: "Kufam";
+    src: url("../fonts/Kufam/Kufam-Black.ttf");
 }

@@ -1,0 +1,61 @@
+html{
+    font-size: 10px;
+}
+body{
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 20px;
+}
+h1{
+   /* font-size: 2em; /*2 x 20px = 40px*/
+    font-size: 3rem; /*3 x 10px = 30px*/
+}
+p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.small{
+    font-size: 0.6em;
+}
+.solid{
+    border-style: solid;
+    border-color: brown;
+    border-width: 5px;
+}
+.dashed{
+    border-style: dashed;
+    border-color: green;
+    border-width: 2px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+#bnuevo:hover{
+    color: blue;
+    border-style: hidden;
+}
+.dotted{
+    border: 3px dotted blue;
+}
+.left_solid{
+    border-left: solid red 2px;
+}
+.right-dotted{
+    border-right: dotted pink 3px;
+}
+.top-dashed{
+    border-top: dashed 2px gray;
+}
+.bottom-double{
+    border-bottom: double 5px red;
+}
+.mix-left-top{
+    border-style: solid none dashed dotted;
+    border-width: 1px 0px 2px 4px;
+    border-color: black red red blue;
+}
+.reto{
+    border-style: solid dashed;
+    border-width: 3px;
+    border-color: red;
+}

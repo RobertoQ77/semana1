@@ -1,0 +1,25 @@
+body{
+    font-family: Verdana;
+}
+.bg{
+    border: solid;
+    height: 300px;
+}
+.color-red{
+    background-color: red;
+}
+.color-green{
+    background-color: green;
+}
+.bg-img{
+    background: url("../../semana1/images/FB_IMG_1653745831500.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg-wow{
+    background: url(../image/WoW.jpg);
+    height: 500px;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
