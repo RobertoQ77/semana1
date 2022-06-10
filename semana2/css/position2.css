@@ -24,7 +24,7 @@ a{
     text-decoration: none;
 }
 div{
-    position: absolute;
+    position: relative;
     top: 100px;
 }
 #nosotros{

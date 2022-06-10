@@ -1,0 +1,52 @@
+body{
+    background-color: rgb(190, 190, 190);
+}
+#contenedor{
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(to right, red 33%, white 33%, white 66%, red 66%, red 100%);
+    margin: auto;
+}
+#contenedor:hover{
+    background: linear-gradient(to top, red 33%, white 33%, white 66%, red 66%, red 100%);
+    box-shadow: none;
+}
+h1{
+    border: 1px black solid;
+    border-radius: 10px;
+    text-align: center;
+}
+h1:hover{
+    text-decoration: underline;
+}
+#circulo{
+    width: 200px;
+    height: 200px;
+    /*background-color: blue;*/
+    background: radial-gradient(red, white, red);
+    margin: 60px auto;
+    border-radius: 100px;
+   /* filter: blur(10px) grayscale(80%) opacity(0.45);*/
+    /*border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;*/
+}
+#circulo:hover{
+    background: none;
+    filter: none;
+    background-color: blue;
+}
+.sombra{
+    /*1 parámetro eje x*/
+    /*2 parámetro eje y*/
+    /*3 parámetro difuminación*/
+    /*4 parámetro propagación*/
+    /*5 parámetro color*/
+    box-shadow: 20px 20px 0px -10px black;
+}
+.sombra_texto{
+    /*1 parámetro eje x*/
+    /*2 parámetro eje y*/
+    /*3 parámetro difuminación*/
+    /*4 parámetro color*/
+    text-shadow: 5px 5px 3px yellow;
+}
