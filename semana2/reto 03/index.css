@@ -1,0 +1,52 @@
+body{
+    background-color: #1c253f;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+}
+#contenedor{
+    position: absolute;
+    top: 100px;
+    left: calc(50vw - 360px);
+}
+table{
+    text-align: left;
+}
+#busqueda{
+    outline: none;
+    width: 480px;
+    border-radius: 5px;
+    font-family: 'Fredoka', sans-serif;
+    margin: 12px;
+    padding: 10px;
+}
+#boton{
+    color: white;
+    width: 120px;
+    border-radius: 5px;
+    font-family: 'Fredoka', sans-serif;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    padding: 10px;
+}
+img{
+    width: 120px;
+    border-radius: 50%;
+    
+}
+#resultado{
+    background-color: #22326b;
+    width: 100%;
+    border-radius: 12px;
+    padding: 25px;
+}
+#izquierdo{
+    width: 57%;
+    text-align: center;
+}
+#centro{
+    width: 29%;
+    text-align-last: left;
+}
+#derecho{
+    width: 100%;
+}
