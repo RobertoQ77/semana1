@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles</title>
+    <style>
+        #container{
+            width: 300px;
+            min-height: 100px;
+            background-color: #ddd;
+            margin: 20px auto;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        p{
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+<script>
+    const div_container = document.getElementById('container');
+    div_container.innerHTML = "<h1>Ejercicios de Bucles</h1>";
+
+    let numero = 6;
+    div_container.innerHTML += "<h2>Factorial de " + numero + "</h2>";
+
+    let factorial = 1;
+    for(let i=1;i<=numero;i++){
+        factorial = factorial * i;
+    }
+    div_container.innerHTML += "<p>Resultado: " + factorial + "</p>";
+    div_container.innerHTML +="<hr>";
+
+    div_container.innerHTML += "<h2>PROBLEMA 2</h2>";
+    numero = 9;
+    let suma = 0;
+    for(let i=1;i<=numero;i++){
+        suma = suma + (7 + 10*i)
+    }
+    div_container.innerHTML += "<p>Resultado2: " + suma + "</p>";
+    div_container.innerHTML +="<hr>";
+
+    div_container.innerHTML += "<h2>PROBLEMA 3</h2>";
+    
+    let numerosPrimos = 200;
+    let cantidadPrimos = 0;
+    numero = 0;
+    resultado = "";
+
+    while(cantidadPrimos<numerosPrimos){
+        let esPrimo = true;
+        numero += 1;
+        for(let divisor = 2; divisor < numero; divisor++){
+            if((numero / divisor > 1) && (numero % divisor == 0)){
+                esPrimo = false;
+                break;
+            }
+        }
+        if(esPrimo){
+            cantidadPrimos += 1;
+            resultado += numero + " - ";
+        }
+    }
+    div_container.innerHTML += "<p>Los " + numerosPrimos+ " números primos son: " + resultado + "</p>";
+    div_container.innerHTML +="<hr>";
+</script>
+</html>

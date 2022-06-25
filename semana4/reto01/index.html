@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    let estado ="Tropical";
+    let color ="red";
+    let temperatura = Number(prompt("Ingrese la temperatura"));
+    if(temperatura<10){estado="Frio"; color="cyan";}
+    else if(temperatura<17){estado="Templado"; color="blue"}
+    else if(temperatura<25){estado="Cálido"; color="orange"}
+    document.write("<p style='color: "+color+"'>Clima "+estado+"</p>");
+</script>
+</html>

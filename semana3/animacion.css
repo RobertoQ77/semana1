@@ -1,0 +1,13 @@
+#box{
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to right, brown 33%,brown 33%,brown 66%,brown 66%, brown 100%);
+    transition: all 6s;
+}
+#box:hover{
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(to right, red 33%, white 33%, white 66%, red 66%, red 100%);
+    transform: translate(100px, 100px);
+    transition: all 2s;
+}

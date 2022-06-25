@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Condicionales</title>
+</head>
+<body>
+    <h1>Martes 21 Junio</h1>
+    <h2>Condicionales + document.write()</h2>
+    <hr>
+</body>
+<script type="text/javascript">
+/*
+    document.write("<h3>Notas</h3>");
+    let nota = Number(prompt("Ingrese nota"));
+
+    if(isNaN(nota)){
+        alert("Solo números por favor");
+        nota = Number(prompt("Ingrese nota"));
+    }
+
+    if(nota<11){
+        document.write("<p class='red'>"+nota+"</p>");
+        document.write("<p class='red'>Desaprobado</p>");
+    }else{
+        document.write("<p class='blue'>"+nota+"</p>");
+        document.write("<p class='blue'>Aprobado</p>");
+    }
+  */  
+  
+  /*
+    document.write("<hr>");
+    document.write("<h3>Ángulo</h3>");
+    let angulo = 91;
+    if(angulo==0){angulo="nulo";}
+    if(angulo>0 && angulo<90){angulo="agudo"}
+    if(angulo==90){angulo="recto";}
+    if(angulo>90 && angulo<180){angulo="obtuso";}
+    if(angulo==180){angulo="llano";}
+    if(angulo>180 && angulo<360){angulo="cóncavo";}
+    if(angulo==360){angulo="completo";}
+    document.write("<p>Angulo "+angulo+"</p>");
+*/
+let hora = 15;
+if(hora < 18 && hora > 6){document.write("<p>Es de día");}
+else{document.write("<p>Es de noche");}
+
+let cielo = (hora < 18 && hora >6) ? 'dia': 'noche'
+
+/*
+let nombre = "Magaly";
+let edad = 18;
+let estado_civil = "soltera";
+let numero_hijos = 2;
+let termino = "a";
+if(estado_civil=="soltera" || (edad>30 && numero_hijos>0)){termino = "ita";}
+document.write("<p>Buen día señor"+termino+" "+nombre+"<p>");
+*/
+</script>
+</html>

@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "Neo";
+    src: url("images/MPLUS2.ttf");
+}
+body{
+    font-family: "Neo";
+}

@@ -1,0 +1,25 @@
+:root {
+    /* CASE SENSITIVE: sensible a mayus y minus. */
+    /* variables de color: */
+    --primer-color: red;
+    --primer-Color: blue;
+    --segundo-color: #abc123;
+    --tercer-color: rgba(100, 200, 123, 0.5);
+
+    /* variables de tamano */
+    --texto-pequeno: 1rem;
+    --texto-mediano: 1.4rem;
+    --texto-grande: 1.6rem;
+    --texto-supergrande: 30px;
+    --texto-diminuto: 0.05em;
+
+    /* variables de duracion */
+    --duration-short: 0.5s;
+    --duration-regular: 1s;
+    --duration-large: 2s;
+
+    /* variables de pointer */
+    --pointer-cursor: cursor;
+
+}
+

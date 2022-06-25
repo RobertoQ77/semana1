@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles</title>
+    <style>
+        #container{
+            width: 300px;
+            min-height: 100px;
+            background-color: #ddd;
+            margin: 20px auto;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        p{
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+<script>
+    const div_container = document.getElementById('container');
+    div_container.innerHTML = "<h1>Bucles</h1>";
+/*
+    let frutas = ['pera', 'manzana', 'limón', 'fresa', 'naranja'];
+    let iter = 0;
+    while(iter < frutas.length){
+        div_container.innerHTML += "<p>" + frutas[iter] + "</p>";
+        if(frutas[iter]== 'limón') break;
+        iter += 1;
+    }
+
+    div_container.innerHTML += "<hr>";
+
+    for(iter=0; iter<21; iter++){
+        div_container.innerHTML += "<p>" + iter + " X 15 = " + (15*iter) + "</p>";
+    }
+*/
+   const numero_tablas = 1;
+   for(let i = 1; i <= numero_tablas; i++){
+    if(i==3||i==6||i==9) continue;
+    div_container.innerHTML +="<h2>Tabla del " + i + ":</h2>";
+    for(let j = 1; j <= 10; j++){
+        if(j==2||j==4||j==6||j==8||j==10) continue;
+        let texto = i + " X " + j + " = " + (i * j);
+        div_container.innerHTML += "<p>" + texto + "</p>";
+    }
+   }
+   div_container.innerHTML += "<hr>";
+
+   let productos = ["mouse", "teclado", "parlante", "monitor", "celular", "adaptador", "cargador"];
+   for (let producto of productos){
+    div_container.innerHTML += "<p> -" + producto + "</p>";
+   }
+   div_container.innerHTML += "<hr>";
+
+   let frase ="amo programar"
+   for (let letra of frase) {
+    if(letra==" ") continue;
+    div_container.innerHTML +="<p>" + letra + "</p>";
+   }
+   div_container.innerHTML += "<hr>";
+
+   for (let x in productos){
+    div_container.innerHTML +="<p> - " + x + "</p>";
+   }
+</script>
+</html>

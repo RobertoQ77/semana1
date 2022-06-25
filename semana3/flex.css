@@ -1,0 +1,38 @@
+.container{
+    height: 100vh;
+    border: solid 3px;
+    display: flex;
+    justify-content: space-evenly;
+    /*
+    justify-content:
+    start alinea los elementos al lado izquierdo
+    end alinea los elementos al lado derecho
+    center alinea los elementos al centro del ancho
+    space-between espacia los elementos en todo el ancho
+    space-around espacia los elementos en el ancho
+    space-evenly espacia los elementos y los espacios de forma uniforme
+    */
+    align-items: center;
+    /*
+    */
+    flex-direction: row;
+    /*
+    */
+}
+.container div{
+    border: solid red 3px;
+    height: 300px;
+    width: 25%;
+}
+.container-2{
+    display: flex;
+    height: 100vh;
+    border: solid green 3px;
+    flex-direction: column-reverse;
+    ;
+}
+.container-2 div{
+    height: 300px;
+    width: 20%;
+    border: solid orange 3px;
+}
