@@ -1,0 +1,100 @@
+* {
+    font-family: 'Trebuchet MS';
+    box-sizing: border-box;
+}
+
+#container {
+    width: 600px;
+    margin: 30px auto;
+}
+
+#list {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+#settings {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.task {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task > a {
+    font-size: 0.8rem;
+}
+
+.task > input {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+.task:hover {
+    background-color: #ddd;
+}
+
+.done {
+    background-color: #51b1d4;
+}
+
+.done > span {
+    font-style: italic;
+}
+
+.done > a {
+    display: none;
+}
+
+.done:hover {
+    background-color: #338dad;
+}
+
+.delete > input {
+    display: none;
+}
+
+.delete > span {
+    margin-left: 30px;
+    color: #aaa;
+    font-style: italic;
+    text-decoration: line-through red;
+}
+
+.delete > a {
+    display: none;
+}
+
+.form {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.form > input[type='text'] {
+    width: 75%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    margin-left: 5%;
+}
+
+.form > input[type='button'] {
+    width: 19%;
+    cursor: pointer;
+    border: 1px dashed #ddd;
+    height: 26px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.form > input[type='button']:hover {
+    background-color: #ddd;
+}

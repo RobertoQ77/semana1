@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1>To-do list</h1>
+      <div id="list">
+        <p class="form">
+          <input type="text" id="input_newtask" placeholder="new task..." />
+          <input type="button" value="Add Task" onclick="addTask();" />
+        </p>
+      </div>
+      <h2>Settings</h2>
+      <div id="settings">
+        <p>
+          &nbsp;<input type="checkbox" id="chx_task_done" />&nbsp;Mostrar u
+          ocultar tareas hechas
+        </p>
+        <p>
+          &nbsp;<input type="checkbox" id="chx_task_delete" />&nbsp;Mostrar u
+          ocultar tareas eliminadas
+        </p>
+        <p>
+          &nbsp;<input type="checkbox" id="chx_task_todo" />&nbsp;Mostrar u
+          ocultar tareas pendientes
+        </p>
+      </div>
+    </div>
+  </body>
+  <script src="task.js"></script>
+  <script src="app.js"></script>
+</html>

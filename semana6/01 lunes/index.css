@@ -1,0 +1,11 @@
+body {
+    font-family: Verdana, sans-serif;
+  }
+  .text-error {
+    color: red;
+    display: none;
+  }
+  .email-error {
+    color: red;
+    display: none;
+  }

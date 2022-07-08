@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <form action="">
+        <h2>Registrando usuarios</h2>
+        <p>
+          <input type="text" placeholder="Ingrese su nombre" />
+        </p>
+        <p>
+          <input type="text" placeholder="Ingrese su apellido" />
+        </p>
+        <p>
+          <input type="email" placeholder="Ingrese su correo" />
+        </p>
+        <p>
+          <input
+            type="password"
+            id="input-password"
+            placeholder="Ingrese su password"
+          />
+          <input type="checkbox" id="checkbox-show-password" />
+        </p>
+        <p>
+          <input type="password" id="input-password-confirm" placeholder="Confirmar password" />
+        </p>
+        
+        <p>
+           <input type="text" id="input-tel" placeholder="ingrese teléfono">
+        </p>
+        <p>
+            <input type="email" id="input-email" placeholder="Ingrese su correo" />
+        </p>
+        <p class="text-error">Error el password no coincide</p>
+        <p class="email-error">Error correo no válido</p>
+        <p>
+          <button disabled type="submit">Enviar datos</button>
+        </p>
+      </form>
+</body>
+<script src="index.js"></script>
+</html>
