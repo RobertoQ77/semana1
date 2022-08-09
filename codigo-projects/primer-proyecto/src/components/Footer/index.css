@@ -1,0 +1,9 @@
+.footer {
+    background-color: red;
+    color: white;
+    padding: 20px;
+}
+.footer a{
+    color: whitesmoke;
+    text-decoration: none;
+}

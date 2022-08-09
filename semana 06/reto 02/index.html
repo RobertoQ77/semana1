@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pi trainer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container-modal">
+      <div class="lost-container">
+        <h2>Perdiste</h2>
+        <iframe
+          src="https://giphy.com/embed/cr9vIO7NsP5cY"
+          width="220"
+          height="163"
+          frameborder="0"
+          class="giphy-embed"
+          allowfullscreen
+        ></iframe>
+        <p>Llegaste al los 10 intentos</p>
+        <h3 id="h3_score_finish">Score:&nbsp;<span></span></h3>
+        <button id="btn-reiniciar">Reinciar</button>
+      </div>
+
+      <div id="container">
+        <h1>Pi trainer</h1>
+        <div id="player">
+          <input
+            type="text"
+            id="username"
+            placeholder="Username..."
+            autocomplete="off"
+          />
+          <input type="button" value="Start" id="start" disabled />
+          <h2></h2>
+        </div>
+
+        <div id="game">
+          <input type="text" id="user_pi" />
+          <span id="result_pi">3.</span>
+        </div>
+
+        <div id="score">
+          <h3 id="h3_attempts">Intentos:&nbsp;<span></span></h3>
+          <h3 id="h3_success_attempts">Correctos:&nbsp;<span></span></h3>
+          <h3 id="h3_failed_attempts">Fallidos:&nbsp;<span></span></h3>
+          <h3 class="h3_score" id="h3_score">Score:&nbsp;<span></span></h3>
+        </div>
+
+        <div id="history">
+          <h2>History</h2>
+          <table cellspacing="0" cellpadding="0">
+            <tr>
+              <th>username</th>
+              <th>score</th>
+              <th>s_attempts</th>
+              <th>game over</th>
+              <th>play time</th>
+            </tr>
+          </table>
+          <input type="button" value="Clear" id="clear" disabled />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="users.js"></script>
+  <script src="app.js"></script>
+</html>

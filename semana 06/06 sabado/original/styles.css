@@ -1,0 +1,9 @@
+#container {
+    width: 600px;
+    margin: 20px auto;
+}
+#grid {
+    width: 400px;
+    height: 300px;
+    flex-wrap: wrap;
+}

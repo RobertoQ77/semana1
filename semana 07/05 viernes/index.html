@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- get bootstrap via CDN: -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <!-- get Noty via CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.css"
+      integrity="sha512-NXUhxhkDgZYOMjaIgd89zF2w51Mub53Ru3zCNp5LTlEzMbNNAjTjDbpURYGS5Mop2cU4b7re1nOIucsVlrx9fA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- get FA via CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Todo List</title>
+  </head>
+  <style>
+    body {
+      font-family: Helvetica;
+    }
+
+    .delete {
+      text-decoration: line-through;
+      text-transform: uppercase !important;
+    }
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg"
+            alt=""
+            width="30"
+            height="24"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="?filter="
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript: resetStorage();"
+                >Reiniciar</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Filtros
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a id="filter_todo" class="dropdown-item" href="?filter=todo"
+                    >TODO</a
+                  >
+                </li>
+                <li>
+                  <a id="filter_done" class="dropdown-item" href="?filter=done"
+                    >DONE</a
+                  >
+                </li>
+                <li>
+                  <a
+                    id="filter_delete"
+                    class="dropdown-item"
+                    href="?filter=delete"
+                    >DELETE</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a id="filter_all" class="dropdown-item" href="?filter=all"
+                    >ALL</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <main class="row">
+      <div class="container mt-5 col-md-7">
+        <h1>Task List</h1>
+        <form id="form-task" class="row my-3 needs-validation" novalidate>
+          <div class="col-6 col-sm-8 col-md-9 col-lg-10">
+            <input
+              type="text"
+              id="input-task"
+              autocomplete="off"
+              placeholder="Nueva tarea..."
+              required
+              class="form-control"
+            />
+            <div class="invalid-feedback">Escriba una tarea</div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <button class="btn btn-outline-primary" type="submit">
+              <i class="fa-solid fa-plus"></i>&nbsp;Add
+            </button>
+          </div>
+        </form>
+        <section id="section-task" class="container"></section>
+        <!-- vamos a poner el detalle de la tarea -->
+        <section
+          id="section-detail-task"
+          class="row d-flex justify-content-center"
+        ></section>
+      </div>
+      <!-- Seccion de graficos -->
+      <section id="section-charts" class="col-md-4 mt-5">
+        <!-- <canvas id="bar-chart" width="400" height="200"></canvas> -->
+        <select name="select-chart" id="select-chart" class="form-select">
+          <option value="" selected disabled>Selecione un grafico</option>
+          <option value="pie">Pie</option>
+          <option value="doughnut">Doughnut</option>
+          <option value="bar">Bar</option>
+          <option value="line">Line</option>
+        </select>
+        <div class="mt-5">
+          <canvas id="task-chart-report"></canvas>
+        </div>
+        <div class="mt-5 d-grid">
+          <button class="btn btn-primary" id="btn-export-chart">
+            Exportar Grafico
+          </button>
+          <!-- <a download="chart.jpeg" href="" id="btn-download-chart">Descargar</a> -->
+        </div>
+      </section>
+    </main>
+    <!-- section del modal -->
+    <!-- <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Launch demo modal
+    </button> -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Filtro de tareas</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- tabla -->
+            <div class="table-responsive">
+              <table class="table table-hover table-bordered">
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Estado</th>
+                    <th>Fecha</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- !nota recurden que jquery debe estar antes, para que nuestro index.js pueda
+  !usar las funciones de jquery -->
+  <script src="./jquery.js"></script>
+  <!-- Libraries -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"
+    integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+
+  <!-- Propios js -->
+  <script src="./task.js"></script>
+  <script src="./index.js"></script>
+  <script src="./chart-task.js"></script>
+</html>

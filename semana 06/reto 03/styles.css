@@ -1,0 +1,175 @@
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container-modal {
+  display: flex;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+  /* position: relative; */
+}
+
+.lost-container {
+  display: none;
+  background-color: #fff;
+  padding: 40px;
+  width: 400px;
+  border-radius: 12px;
+  text-align: center;
+  z-index: 1;
+}
+
+.lost-container > h2 {
+  color: crimson;
+}
+
+.lost-container > h3 {
+  color: rgb(89, 211, 166);
+}
+
+.lost-container > button {
+  border: #003762;
+  background-color: #003762;
+  padding: 12px;
+  color: #fff;
+  border-radius: 8px;
+  width: 200px;
+  cursor: pointer;
+}
+
+#container {
+  width: 600px;
+  margin: 30px auto;
+  /* position: absolute; */
+  /* z-index: -1; */
+}
+
+input {
+  height: 40px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+input[type="text"] {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.start {
+  height: 40px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  background-color: #0065b2;
+  border: 1px solid #0065b2;
+  color: white;
+  cursor: pointer;
+}
+
+.start:hover {
+  background-color: #003762;
+  border-color: #003762;
+}
+
+.start:disabled {
+  background-color: #ddd;
+  border-color: #ddd;
+  cursor: not-allowed;
+}
+/* Player */
+#player {
+  border: 1px dashed #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#player > input[type="text"] {
+  flex-grow: 2;
+}
+
+#player > input[type="button"] {
+  flex-grow: 1;
+}
+
+#player > h2 {
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+/* Game */
+#game {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#game > input {
+  width: 10%;
+  text-align: center;
+  font-size: 2rem;
+}
+#game > span {
+  margin: 10px auto;
+  font-size: 2rem;
+  max-width: 75%;
+  overflow-wrap: break-word;
+}
+
+/* Score */
+#score {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+
+#h3_success_attempts {
+  color: green;
+}
+
+#h3_failed_attempts {
+  color: red;
+}
+
+#h3_score {
+  color: blue;
+}
+
+/* History */
+table {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px #ddd solid;
+}
+
+th {
+  padding: 10px;
+  text-align: center;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+  border-top: 1px #ddd solid;
+}
+
+input {
+  margin-top: 10px;
+}
